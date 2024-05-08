@@ -34,11 +34,11 @@ services:
       - static_volume:/home/app/web/staticfiles
       - media_volume:/home/app/web/mediafiles
     environment:
-      - VIRTUAL_HOST=python.tz, python.or.tz, www.python.tz, www.python.or.tz
-      - LETSENCRYPT_HOST=python.tz, python.or.tz, www.python.tz, www.python.or.tz
+      - VIRTUAL_HOST=python.tz, www.python.tz
+      - LETSENCRYPT_HOST=python.tz, www.python.tz
       - LETSENCRYPT_EMAIL=comms@python.tz
     ports:
-      - 1337:80
+      - 1338:80
     depends_on:
       - web
 
