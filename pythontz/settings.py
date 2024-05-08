@@ -26,7 +26,15 @@ SECRET_KEY = 'django-insecure--u$zncr!=zt)x)1^9@lv3@%f2_o$kn4=qq5c89n9_47vum(3o2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "0.0.0.0",
+    "127.0.0.1",
+    "python.tz",
+    "www.python.tz",
+    "python.or.tz",
+    "www.python.or.tz",
+]
 
 
 # Application definition
@@ -38,6 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tailwind',
+    'pythontztheme',
+    'django_browser_reload'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'pythontz.urls'
@@ -128,3 +140,9 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TAILWIND_APP_NAME = 'pythontztheme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
